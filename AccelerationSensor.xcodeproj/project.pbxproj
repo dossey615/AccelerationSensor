@@ -14,6 +14,7 @@
 		E3A4A77820D21A65004908DA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A4A77620D21A65004908DA /* LaunchScreen.storyboard */; };
 		E3A4A78320D21A65004908DA /* AccelerationSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78220D21A65004908DA /* AccelerationSensorTests.swift */; };
 		E3A4A78E20D21A65004908DA /* AccelerationSensorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */; };
+		E3A4A79D20D21E6D004908DA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A4A79C20D21E6D004908DA /* CoreMotion.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E3A4A78920D21A65004908DA /* AccelerationSensorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AccelerationSensorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationSensorUITests.swift; sourceTree = "<group>"; };
 		E3A4A78F20D21A65004908DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3A4A79C20D21E6D004908DA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3A4A79D20D21E6D004908DA /* CoreMotion.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +84,7 @@
 				E3A4A78120D21A65004908DA /* AccelerationSensorTests */,
 				E3A4A78C20D21A65004908DA /* AccelerationSensorUITests */,
 				E3A4A76B20D21A63004908DA /* Products */,
+				E3A4A79B20D21E6C004908DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -123,6 +127,14 @@
 				E3A4A78F20D21A65004908DA /* Info.plist */,
 			);
 			path = AccelerationSensorUITests;
+			sourceTree = "<group>";
+		};
+		E3A4A79B20D21E6C004908DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E3A4A79C20D21E6D004908DA /* CoreMotion.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
