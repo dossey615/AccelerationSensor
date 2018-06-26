@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CheckAccelerateViewController.swift
 //  AccelerationSensor
 //
 //  Created by 土居将史 on 2018/06/14.
@@ -9,12 +9,13 @@
 import UIKit
 import CoreMotion
 
-class ViewController: UIViewController {
+class CheckAccelerateViewController: UIViewController {
     
     //MotionManagerのインスタンス生成
     let motion: CMMotionManager = CMMotionManager()
+    let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var accelData:[AcceleratrDate] = []
-    let acInfo = AcceleratrDate()
+
 
     //X,Y,Zの値を表示するTextLabel
     @IBOutlet weak var valueX: UILabel!
@@ -33,7 +34,6 @@ class ViewController: UIViewController {
             for i in (0..<accelData.count){
                 print(accelData[i].x)
             }
-            print(accelData.count)
             motion.stopAccelerometerUpdates()
             let next = storyboard!.instantiateViewController(withIdentifier: "resultView")
             self.present(next,animated: true, completion: nil)
@@ -42,16 +42,17 @@ class ViewController: UIViewController {
     
     func MeasureAccel(){
         // 更新周期を設定.
-        motion.accelerometerUpdateInterval = 0.5
+        motion.accelerometerUpdateInterval = 0.1
         //値を取得し、表示
         motion.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: {(accelData: CMAccelerometerData?, errorOC:Error?) -> Void in
+            let acInfo = AcceleratrDate()
             self.valueX.text = String(format: "%06f", (accelData?.acceleration.x)!)
             self.valueY.text = String(format: "%06f", (accelData?.acceleration.y)!)
             self.valueZ.text = String(format: "%06f", (accelData?.acceleration.z)!)
-            self.acInfo.x = (accelData?.acceleration.x)!
-            self.acInfo.y = (accelData?.acceleration.y)!
-            self.acInfo.z = (accelData?.acceleration.z)!
-            self.accelData.append(self.acInfo)
+            acInfo.x = (accelData?.acceleration.x)!
+            acInfo.y = (accelData?.acceleration.y)!
+            acInfo.z = (accelData?.acceleration.z)!
+            self.appDelegate.resultData.append(acInfo)
         })
         
     }
