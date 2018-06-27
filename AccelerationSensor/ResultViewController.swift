@@ -33,6 +33,8 @@ class ResultViewController: UIViewController{
         let rect = CGRect(x:0, y: 10, width: self.ChartView.frame.width - 55, height: self.ChartView.frame.height - 160)
         let chartView = LineChartView(frame: rect)
         
+        chartView.animate(xAxisDuration: 3)
+        
         var entry = [ChartDataEntry]()
         
         for (i, d) in data.enumerated() {
@@ -44,6 +46,9 @@ class ResultViewController: UIViewController{
         chartView.data = LineChartData(dataSet: dataSet)
         
         self.ChartView.addSubview(chartView)
+        
+        Delegate.resultData = []
+        
     }
 
     
