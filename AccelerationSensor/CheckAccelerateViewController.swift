@@ -22,11 +22,18 @@ class CheckAccelerateViewController: UIViewController {
     @IBOutlet weak var valueY: UILabel!
     @IBOutlet weak var valueZ: UILabel!
     
+    @IBOutlet weak var StartSet: UIButton!
+    @IBOutlet weak var StopSet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        StopSet.isEnabled = false
     }
-  
+
+    
     @IBAction func StartButton(_ sender: Any) {
+        StartSet.isEnabled = false
+        StopSet.isEnabled = true
         MeasureAccel()
     }
     @IBAction func StopButton(_ sender: Any) {
@@ -34,9 +41,10 @@ class CheckAccelerateViewController: UIViewController {
             motion.stopAccelerometerUpdates()
             let next = storyboard!.instantiateViewController(withIdentifier: "resultView")
             self.present(next,animated: true, completion: nil)
+            StartSet.isEnabled = true
+            StopSet.isEnabled = false
         }
     }
-    
     func MeasureAccel(){
         // 更新周期を設定.
         motion.accelerometerUpdateInterval = 0.1
