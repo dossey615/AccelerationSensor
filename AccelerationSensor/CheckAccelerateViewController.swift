@@ -31,9 +31,6 @@ class CheckAccelerateViewController: UIViewController {
     }
     @IBAction func StopButton(_ sender: Any) {
         if (motion.isAccelerometerActive) {
-            for i in (0..<accelData.count){
-                print(accelData[i].x)
-            }
             motion.stopAccelerometerUpdates()
             let next = storyboard!.instantiateViewController(withIdentifier: "resultView")
             self.present(next,animated: true, completion: nil)
@@ -56,9 +53,6 @@ class CheckAccelerateViewController: UIViewController {
         })
         
     }
-    
-    
-    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
