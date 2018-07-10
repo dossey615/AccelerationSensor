@@ -8,14 +8,14 @@
 
 import UIKit
 import CoreMotion
+import WatchConnectivity
 
-class CheckAccelerateViewController: UIViewController {
+class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
     
     //MotionManagerのインスタンス生成
     let motion: CMMotionManager = CMMotionManager()
     let appDelegate = UIApplication.shared.delegate as! AppDelegate
     var accelData:[AcceleratrDate] = []
-
 
     //X,Y,Zの値を表示するTextLabel
     @IBOutlet weak var valueX: UILabel!
@@ -27,6 +27,12 @@ class CheckAccelerateViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        if WCSession.isSupported() {
+        let session = WCSession.default
+            session.delegate = self
+            session.activate()
+        }
+        
         StopSet.isEnabled = false
     }
 
@@ -36,6 +42,7 @@ class CheckAccelerateViewController: UIViewController {
         StopSet.isEnabled = true
         MeasureAccel()
     }
+    
     @IBAction func StopButton(_ sender: Any) {
         if (motion.isAccelerometerActive) {
             motion.stopAccelerometerUpdates()
@@ -45,6 +52,7 @@ class CheckAccelerateViewController: UIViewController {
             StopSet.isEnabled = false
         }
     }
+    
     func MeasureAccel(){
         // 更新周期を設定.
         motion.accelerometerUpdateInterval = 0.1
@@ -59,14 +67,24 @@ class CheckAccelerateViewController: UIViewController {
             acInfo.z = (accelData?.acceleration.z)!
             self.appDelegate.resultData.append(acInfo)
         })
-        
     }
+    
 
+    func sessionDidBecomeInactive(_ session: WCSession) {
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+    }
+    
+    func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {
+        print("activationDidComplete")
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
 }
 

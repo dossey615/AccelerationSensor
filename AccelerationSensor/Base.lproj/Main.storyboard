@@ -37,6 +37,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Lb0-c2-w2z" firstAttribute="top" secondItem="0Vo-Uj-pHm" secondAttribute="top" id="5wJ-Sb-SSX"/>
+                                            <constraint firstItem="Lb0-c2-w2z" firstAttribute="leading" secondItem="0Vo-Uj-pHm" secondAttribute="leading" id="Kxt-J5-L2k"/>
+                                            <constraint firstItem="jEH-Wc-4Xs" firstAttribute="leading" secondItem="Lb0-c2-w2z" secondAttribute="trailing" id="Utr-CW-vE5"/>
+                                            <constraint firstItem="jEH-Wc-4Xs" firstAttribute="leading" secondItem="Lb0-c2-w2z" secondAttribute="trailing" id="YCL-1D-FqW"/>
+                                            <constraint firstAttribute="bottom" secondItem="Lb0-c2-w2z" secondAttribute="bottom" id="dzD-06-JUZ"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u6i-5F-dUA">
                                         <rect key="frame" x="0.0" y="60.5" width="41" height="20.5"/>
@@ -54,6 +61,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Scq-Pf-zXF" firstAttribute="top" secondItem="u6i-5F-dUA" secondAttribute="top" id="8Rp-zy-BIu"/>
+                                            <constraint firstAttribute="bottom" secondItem="Scq-Pf-zXF" secondAttribute="bottom" id="LcR-4J-4If"/>
+                                            <constraint firstItem="xtj-Jj-jPU" firstAttribute="leading" secondItem="Scq-Pf-zXF" secondAttribute="trailing" id="U0C-Nk-E6N"/>
+                                            <constraint firstItem="Scq-Pf-zXF" firstAttribute="leading" secondItem="u6i-5F-dUA" secondAttribute="leading" id="zHG-Fd-Gov"/>
+                                        </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ntm-em-mAu">
                                         <rect key="frame" x="0.0" y="121" width="41" height="20.5"/>
@@ -71,6 +84,13 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="zsr-2w-USx" firstAttribute="leading" secondItem="cGi-ZB-HVl" secondAttribute="trailing" id="0md-r4-28a"/>
+                                            <constraint firstItem="cGi-ZB-HVl" firstAttribute="leading" secondItem="ntm-em-mAu" secondAttribute="leading" id="0rf-He-pMZ"/>
+                                            <constraint firstItem="zsr-2w-USx" firstAttribute="leading" secondItem="cGi-ZB-HVl" secondAttribute="trailing" id="9lP-xR-paR"/>
+                                            <constraint firstAttribute="bottom" secondItem="cGi-ZB-HVl" secondAttribute="bottom" id="m2i-Xh-IoE"/>
+                                            <constraint firstItem="cGi-ZB-HVl" firstAttribute="top" secondItem="ntm-em-mAu" secondAttribute="top" id="zvV-Ye-s5e"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                             </stackView>

@@ -11,6 +11,13 @@
 		E355CDB520E0AE7E00FE13B7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E355CDB320E0AE7E00FE13B7 /* ResultViewController.swift */; };
 		E355CDD420E0C3EE00FE13B7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E355CDD120E0C3E200FE13B7 /* Charts.framework */; };
 		E355CDD520E0C3EE00FE13B7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E355CDD120E0C3E200FE13B7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		E3770DB220E611C200F84B2F /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3770DB020E611C200F84B2F /* Interface.storyboard */; };
+		E3770DB420E611C500F84B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3770DB320E611C500F84B2F /* Assets.xcassets */; };
+		E3770DBB20E611C500F84B2F /* AccelerationForWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = E3770DBA20E611C500F84B2F /* AccelerationForWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		E3770DC220E611C500F84B2F /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3770DC120E611C500F84B2F /* ExtensionDelegate.swift */; };
+		E3770DC420E611C500F84B2F /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3770DC320E611C500F84B2F /* NotificationController.swift */; };
+		E3770DC620E611C600F84B2F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E3770DC520E611C600F84B2F /* Assets.xcassets */; };
+		E3770DCB20E611C600F84B2F /* AccelerationForWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = E3770DAE20E611C200F84B2F /* AccelerationForWatch.app */; };
 		E3A4A76E20D21A63004908DA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A76D20D21A63004908DA /* AppDelegate.swift */; };
 		E3A4A77020D21A64004908DA /* CheckAccelerateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A76F20D21A64004908DA /* CheckAccelerateViewController.swift */; };
 		E3A4A77320D21A64004908DA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E3A4A77120D21A64004908DA /* Main.storyboard */; };
@@ -19,6 +26,8 @@
 		E3A4A78320D21A65004908DA /* AccelerationSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78220D21A65004908DA /* AccelerationSensorTests.swift */; };
 		E3A4A78E20D21A65004908DA /* AccelerationSensorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */; };
 		E3A4A79D20D21E6D004908DA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A4A79C20D21E6D004908DA /* CoreMotion.framework */; };
+		E3DEAC3A20EB5B7500B10E7F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3770DBF20E611C500F84B2F /* InterfaceController.swift */; };
+		E3DEAC3F20EDF7B500B10E7F /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DEAC3E20EDF7B500B10E7F /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +51,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = A58A4ED274A941CA248EA921;
 			remoteInfo = Charts;
+		};
+		E3770DBC20E611C500F84B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3A4A76220D21A63004908DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3770DB920E611C500F84B2F;
+			remoteInfo = "AccelerationForWatch Extension";
+		};
+		E3770DC920E611C600F84B2F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E3A4A76220D21A63004908DA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E3770DAD20E611C200F84B2F;
+			remoteInfo = AccelerationForWatch;
 		};
 		E3A4A77F20D21A65004908DA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -71,12 +94,45 @@
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		E3770DD220E611C600F84B2F /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				E3770DBB20E611C500F84B2F /* AccelerationForWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3770DD420E611C600F84B2F /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				E3770DCB20E611C600F84B2F /* AccelerationForWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		E35127EE20DB62AE00AFED10 /* AccelerateData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateData.swift; sourceTree = "<group>"; };
 		E355CDB320E0AE7E00FE13B7 /* ResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultViewController.swift; sourceTree = "<group>"; };
 		E355CDCB20E0C3E200FE13B7 /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		E3770DAE20E611C200F84B2F /* AccelerationForWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerationForWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3770DB120E611C200F84B2F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		E3770DB320E611C500F84B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3770DB520E611C500F84B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3770DBA20E611C500F84B2F /* AccelerationForWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "AccelerationForWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E3770DBF20E611C500F84B2F /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		E3770DC120E611C500F84B2F /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		E3770DC320E611C500F84B2F /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		E3770DC520E611C600F84B2F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		E3770DC720E611C600F84B2F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E3770DC820E611C600F84B2F /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
 		E3A4A76A20D21A63004908DA /* AccelerationSensor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccelerationSensor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E3A4A76D20D21A63004908DA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E3A4A76F20D21A64004908DA /* CheckAccelerateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAccelerateViewController.swift; sourceTree = "<group>"; };
@@ -91,9 +147,19 @@
 		E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationSensorUITests.swift; sourceTree = "<group>"; };
 		E3A4A78F20D21A65004908DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A4A79C20D21E6D004908DA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E3DEAC3C20EDDE5600B10E7F /* AccelerationForWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccelerationForWatch.entitlements; sourceTree = "<group>"; };
+		E3DEAC3E20EDF7B500B10E7F /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		E3770DB720E611C500F84B2F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3DEAC3F20EDF7B500B10E7F /* WatchConnectivity.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3A4A76720D21A63004908DA /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -129,6 +195,30 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		E3770DAF20E611C200F84B2F /* AccelerationForWatch */ = {
+			isa = PBXGroup;
+			children = (
+				E3DEAC3C20EDDE5600B10E7F /* AccelerationForWatch.entitlements */,
+				E3770DB020E611C200F84B2F /* Interface.storyboard */,
+				E3770DB320E611C500F84B2F /* Assets.xcassets */,
+				E3770DB520E611C500F84B2F /* Info.plist */,
+			);
+			path = AccelerationForWatch;
+			sourceTree = "<group>";
+		};
+		E3770DBE20E611C500F84B2F /* AccelerationForWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				E3770DBF20E611C500F84B2F /* InterfaceController.swift */,
+				E3770DC120E611C500F84B2F /* ExtensionDelegate.swift */,
+				E3770DC320E611C500F84B2F /* NotificationController.swift */,
+				E3770DC520E611C600F84B2F /* Assets.xcassets */,
+				E3770DC720E611C600F84B2F /* Info.plist */,
+				E3770DC820E611C600F84B2F /* PushNotificationPayload.apns */,
+			);
+			path = "AccelerationForWatch Extension";
+			sourceTree = "<group>";
+		};
 		E3A4A76120D21A63004908DA = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +226,8 @@
 				E3A4A76C20D21A63004908DA /* AccelerationSensor */,
 				E3A4A78120D21A65004908DA /* AccelerationSensorTests */,
 				E3A4A78C20D21A65004908DA /* AccelerationSensorUITests */,
+				E3770DAF20E611C200F84B2F /* AccelerationForWatch */,
+				E3770DBE20E611C500F84B2F /* AccelerationForWatch Extension */,
 				E3A4A76B20D21A63004908DA /* Products */,
 				E3A4A79B20D21E6C004908DA /* Frameworks */,
 			);
@@ -147,6 +239,8 @@
 				E3A4A76A20D21A63004908DA /* AccelerationSensor.app */,
 				E3A4A77E20D21A65004908DA /* AccelerationSensorTests.xctest */,
 				E3A4A78920D21A65004908DA /* AccelerationSensorUITests.xctest */,
+				E3770DAE20E611C200F84B2F /* AccelerationForWatch.app */,
+				E3770DBA20E611C500F84B2F /* AccelerationForWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -187,6 +281,7 @@
 		E3A4A79B20D21E6C004908DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E3DEAC3E20EDF7B500B10E7F /* WatchConnectivity.framework */,
 				E3A4A79C20D21E6D004908DA /* CoreMotion.framework */,
 			);
 			name = Frameworks;
@@ -195,6 +290,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		E3770DAD20E611C200F84B2F /* AccelerationForWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3770DD320E611C600F84B2F /* Build configuration list for PBXNativeTarget "AccelerationForWatch" */;
+			buildPhases = (
+				E3770DAC20E611C200F84B2F /* Resources */,
+				E3770DD220E611C600F84B2F /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E3770DBD20E611C500F84B2F /* PBXTargetDependency */,
+			);
+			name = AccelerationForWatch;
+			productName = AccelerationForWatch;
+			productReference = E3770DAE20E611C200F84B2F /* AccelerationForWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		E3770DB920E611C500F84B2F /* AccelerationForWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E3770DD120E611C600F84B2F /* Build configuration list for PBXNativeTarget "AccelerationForWatch Extension" */;
+			buildPhases = (
+				E3770DB620E611C500F84B2F /* Sources */,
+				E3770DB720E611C500F84B2F /* Frameworks */,
+				E3770DB820E611C500F84B2F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AccelerationForWatch Extension";
+			productName = "AccelerationForWatch Extension";
+			productReference = E3770DBA20E611C500F84B2F /* AccelerationForWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		E3A4A76920D21A63004908DA /* AccelerationSensor */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = E3A4A79220D21A65004908DA /* Build configuration list for PBXNativeTarget "AccelerationSensor" */;
@@ -203,11 +332,13 @@
 				E3A4A76720D21A63004908DA /* Frameworks */,
 				E3A4A76820D21A63004908DA /* Resources */,
 				E355CDD820E0C3EE00FE13B7 /* Embed Frameworks */,
+				E3770DD420E611C600F84B2F /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 				E355CDD720E0C3EE00FE13B7 /* PBXTargetDependency */,
+				E3770DCA20E611C600F84B2F /* PBXTargetDependency */,
 			);
 			name = AccelerationSensor;
 			productName = AccelerationSensor;
@@ -260,8 +391,24 @@
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "土居将史";
 				TargetAttributes = {
+					E3770DAD20E611C200F84B2F = {
+						CreatedOnToolsVersion = 9.4.1;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
+					};
+					E3770DB920E611C500F84B2F = {
+						CreatedOnToolsVersion = 9.4.1;
+					};
 					E3A4A76920D21A63004908DA = {
 						CreatedOnToolsVersion = 9.4;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					E3A4A77D20D21A65004908DA = {
 						CreatedOnToolsVersion = 9.4;
@@ -295,6 +442,8 @@
 				E3A4A76920D21A63004908DA /* AccelerationSensor */,
 				E3A4A77D20D21A65004908DA /* AccelerationSensorTests */,
 				E3A4A78820D21A65004908DA /* AccelerationSensorUITests */,
+				E3770DAD20E611C200F84B2F /* AccelerationForWatch */,
+				E3770DB920E611C500F84B2F /* AccelerationForWatch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -317,6 +466,23 @@
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
+		E3770DAC20E611C200F84B2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3770DB420E611C500F84B2F /* Assets.xcassets in Resources */,
+				E3770DB220E611C200F84B2F /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3770DB820E611C500F84B2F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3770DC620E611C600F84B2F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3A4A76820D21A63004908DA /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -344,6 +510,16 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		E3770DB620E611C500F84B2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E3DEAC3A20EB5B7500B10E7F /* InterfaceController.swift in Sources */,
+				E3770DC420E611C500F84B2F /* NotificationController.swift in Sources */,
+				E3770DC220E611C500F84B2F /* ExtensionDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		E3A4A76620D21A63004908DA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -379,6 +555,16 @@
 			name = Charts;
 			targetProxy = E355CDD620E0C3EE00FE13B7 /* PBXContainerItemProxy */;
 		};
+		E3770DBD20E611C500F84B2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3770DB920E611C500F84B2F /* AccelerationForWatch Extension */;
+			targetProxy = E3770DBC20E611C500F84B2F /* PBXContainerItemProxy */;
+		};
+		E3770DCA20E611C600F84B2F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E3770DAD20E611C200F84B2F /* AccelerationForWatch */;
+			targetProxy = E3770DC920E611C600F84B2F /* PBXContainerItemProxy */;
+		};
 		E3A4A78020D21A65004908DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = E3A4A76920D21A63004908DA /* AccelerationSensor */;
@@ -392,6 +578,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		E3770DB020E611C200F84B2F /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E3770DB120E611C200F84B2F /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		E3A4A77120D21A64004908DA /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -411,6 +605,88 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		E3770DCC20E611C600F84B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDV5SVN7RH;
+				IBSC_MODULE = AccelerationForWatch_Extension;
+				INFOPLIST_FILE = AccelerationForWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.AccelerationSensor.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		E3770DCD20E611C600F84B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDV5SVN7RH;
+				IBSC_MODULE = AccelerationForWatch_Extension;
+				INFOPLIST_FILE = AccelerationForWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.AccelerationSensor.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
+		E3770DCE20E611C600F84B2F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDV5SVN7RH;
+				INFOPLIST_FILE = "AccelerationForWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.AccelerationSensor.watchkitapp.watchkitextension2;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Debug;
+		};
+		E3770DCF20E611C600F84B2F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = KDV5SVN7RH;
+				INFOPLIST_FILE = "AccelerationForWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.project.AccelerationSensor.watchkitapp.watchkitextension2;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 4.3;
+			};
+			name = Release;
+		};
 		E3A4A79020D21A65004908DA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -648,6 +924,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		E3770DD120E611C600F84B2F /* Build configuration list for PBXNativeTarget "AccelerationForWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3770DCE20E611C600F84B2F /* Debug */,
+				E3770DCF20E611C600F84B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E3770DD320E611C600F84B2F /* Build configuration list for PBXNativeTarget "AccelerationForWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E3770DCC20E611C600F84B2F /* Debug */,
+				E3770DCD20E611C600F84B2F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		E3A4A76520D21A63004908DA /* Build configuration list for PBXProject "AccelerationSensor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
