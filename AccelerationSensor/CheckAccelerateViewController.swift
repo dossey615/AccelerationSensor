@@ -27,6 +27,8 @@ class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //データ共有のセットアップ
         if WCSession.isSupported() {
         let session = WCSession.default
             session.delegate = self
@@ -41,6 +43,7 @@ class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
         StartSet.isEnabled = false
         StopSet.isEnabled = true
         MeasureAccel()
+        sendWatchData()
     }
     
     @IBAction func StopButton(_ sender: Any) {
@@ -66,10 +69,18 @@ class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
             acInfo.y = (accelData?.acceleration.y)!
             acInfo.z = (accelData?.acceleration.z)!
             self.appDelegate.resultData.append(acInfo)
+            print(self.appDelegate.resultData.count)
         })
     }
     
-
+    func sendWatchData(){
+        if WCSession.default.isReachable{
+            WCSession.default.sendMessage(["StartFlag" : "start"],
+                                          replyHandler: { replyDict in print(replyDict)},
+                                          errorHandler: { error in print(error.localizedDescription)})
+            }
+    }
+    
     func sessionDidBecomeInactive(_ session: WCSession) {
     }
     
