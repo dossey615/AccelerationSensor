@@ -43,11 +43,12 @@ class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
         StartSet.isEnabled = false
         StopSet.isEnabled = true
         MeasureAccel()
-        sendWatchData()
+        sendWatchData(sendData: ["Flag" : "start"])
     }
     
     @IBAction func StopButton(_ sender: Any) {
         if (motion.isAccelerometerActive) {
+            sendWatchData(sendData: ["Flag" : "stop"])
             motion.stopAccelerometerUpdates()
             let next = storyboard!.instantiateViewController(withIdentifier: "resultView")
             self.present(next,animated: true, completion: nil)
@@ -73,9 +74,9 @@ class CheckAccelerateViewController: UIViewController, WCSessionDelegate{
         })
     }
     
-    func sendWatchData(){
+    func sendWatchData(sendData : [String : Any]){
         if WCSession.default.isReachable{
-            WCSession.default.sendMessage(["StartFlag" : "start"],
+            WCSession.default.sendMessage(sendData,
                                           replyHandler: { replyDict in print(replyDict)},
                                           errorHandler: { error in print(error.localizedDescription)})
             }

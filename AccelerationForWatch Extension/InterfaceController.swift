@@ -14,6 +14,7 @@ import WatchConnectivity
 class InterfaceController: WKInterfaceController, WCSessionDelegate{
     
     let motion: CMMotionManager = CMMotionManager()
+    var accelData:[AcceleratrDate] = []
     
     @IBOutlet var xdataLabel: WKInterfaceLabel!
     @IBOutlet var ydataLabel: WKInterfaceLabel!
@@ -40,20 +41,30 @@ class InterfaceController: WKInterfaceController, WCSessionDelegate{
     //加速度の計測開始関数
     func StartAccelerator(){
         //加速度取得の周期
-        motion.accelerometerUpdateInterval = 0.5
+        motion.accelerometerUpdateInterval = 0.1
         
         //加速度の取得開始
         motion.startAccelerometerUpdates(to: OperationQueue.current!, withHandler: {(accelData: CMAccelerometerData?, errorOC:Error?) -> Void in
+            let acInfo = AcceleratrDate()
             //画面に表示
             self.xdataLabel.setText("xdata : " + String(format: "%06f", (accelData?.acceleration.x)!))
             self.ydataLabel.setText("ydata : " + String(format: "%06f", (accelData?.acceleration.y)!))
             self.zdataLabel.setText("zdata : " + String(format: "%06f", (accelData?.acceleration.z)!))
+            acInfo.x = (accelData?.acceleration.x)!
+            acInfo.y = (accelData?.acceleration.y)!
+            acInfo.z = (accelData?.acceleration.z)!
+            self.accelData.append(acInfo)
         })
+    }
+    func StopAccelerator(){
+        motion.stopAccelerometerUpdates()
     }
     
     func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
-        if (message["StartFlag"] as! String?) != nil{
+        if message["Flag"] as! String == "start"{
             StartAccelerator()
+        }else{
+            StopAccelerator()
         }
     }
     

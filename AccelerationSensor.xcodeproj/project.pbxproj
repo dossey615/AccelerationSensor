@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		E35127EF20DB62AE00AFED10 /* AccelerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35127EE20DB62AE00AFED10 /* AccelerateData.swift */; };
 		E355CDB520E0AE7E00FE13B7 /* ResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E355CDB320E0AE7E00FE13B7 /* ResultViewController.swift */; };
 		E355CDD420E0C3EE00FE13B7 /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E355CDD120E0C3E200FE13B7 /* Charts.framework */; };
 		E355CDD520E0C3EE00FE13B7 /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = E355CDD120E0C3E200FE13B7 /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -26,6 +25,8 @@
 		E3A4A78320D21A65004908DA /* AccelerationSensorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78220D21A65004908DA /* AccelerationSensorTests.swift */; };
 		E3A4A78E20D21A65004908DA /* AccelerationSensorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */; };
 		E3A4A79D20D21E6D004908DA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3A4A79C20D21E6D004908DA /* CoreMotion.framework */; };
+		E3C2583820FC57AC005CAC50 /* AccelerateData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E35127EE20DB62AE00AFED10 /* AccelerateData.swift */; };
+		E3C2583A20FC589D005CAC50 /* AccelerateDataForWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3C2583920FC589D005CAC50 /* AccelerateDataForWatch.swift */; };
 		E3DEAC3A20EB5B7500B10E7F /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3770DBF20E611C500F84B2F /* InterfaceController.swift */; };
 		E3DEAC3F20EDF7B500B10E7F /* WatchConnectivity.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E3DEAC3E20EDF7B500B10E7F /* WatchConnectivity.framework */; };
 /* End PBXBuildFile section */
@@ -147,6 +148,7 @@
 		E3A4A78D20D21A65004908DA /* AccelerationSensorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerationSensorUITests.swift; sourceTree = "<group>"; };
 		E3A4A78F20D21A65004908DA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E3A4A79C20D21E6D004908DA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		E3C2583920FC589D005CAC50 /* AccelerateDataForWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccelerateDataForWatch.swift; sourceTree = "<group>"; };
 		E3DEAC3C20EDDE5600B10E7F /* AccelerationForWatch.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AccelerationForWatch.entitlements; sourceTree = "<group>"; };
 		E3DEAC3E20EDF7B500B10E7F /* WatchConnectivity.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WatchConnectivity.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS4.3.sdk/System/Library/Frameworks/WatchConnectivity.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
@@ -212,6 +214,7 @@
 				E3770DBF20E611C500F84B2F /* InterfaceController.swift */,
 				E3770DC120E611C500F84B2F /* ExtensionDelegate.swift */,
 				E3770DC320E611C500F84B2F /* NotificationController.swift */,
+				E3C2583920FC589D005CAC50 /* AccelerateDataForWatch.swift */,
 				E3770DC520E611C600F84B2F /* Assets.xcassets */,
 				E3770DC720E611C600F84B2F /* Info.plist */,
 				E3770DC820E611C600F84B2F /* PushNotificationPayload.apns */,
@@ -514,6 +517,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E3C2583A20FC589D005CAC50 /* AccelerateDataForWatch.swift in Sources */,
 				E3DEAC3A20EB5B7500B10E7F /* InterfaceController.swift in Sources */,
 				E3770DC420E611C500F84B2F /* NotificationController.swift in Sources */,
 				E3770DC220E611C500F84B2F /* ExtensionDelegate.swift in Sources */,
@@ -524,9 +528,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E35127EF20DB62AE00AFED10 /* AccelerateData.swift in Sources */,
 				E3A4A77020D21A64004908DA /* CheckAccelerateViewController.swift in Sources */,
 				E3A4A76E20D21A63004908DA /* AppDelegate.swift in Sources */,
+				E3C2583820FC57AC005CAC50 /* AccelerateData.swift in Sources */,
 				E355CDB520E0AE7E00FE13B7 /* ResultViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
